@@ -6,18 +6,19 @@ const colors = ['red', 'green', 'blue', 'white', 'black', 'grey', 'orange', 'pin
 
 elForm.addEventListener('submit', function(e) {
     e.preventDefault()
-    console.log(true);
-    if (elInput.value != ""){
-        if(colors.includes(elInput.value)){
+    let result = elInput.value.toLowerCase()
+    console.log(result);
+    if (result != ""){
+        if(colors.includes(result)){
             let newLi = document.createElement('li')
-            if(elInput.value == "black"){
-                newLi.textContent = elInput.value
-                newLi.style.backgroundColor = elInput.value
+            if(result == "black"){
+                newLi.textContent = result
+                newLi.style.backgroundColor = result
                 newLi.style.color = "white"
             }
-            newLi.textContent = elInput.value
-            console.log(elInput.value);
-            newLi.style.backgroundColor = elInput.value
+            newLi.textContent = result
+            console.log(result);
+            newLi.style.backgroundColor = result
             console.log(newLi);
             elList.appendChild(newLi)
             console.log(true);
